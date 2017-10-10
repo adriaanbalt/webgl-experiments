@@ -1,0 +1,19 @@
+{
+  "name": "tbg-presentation-boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "Greg Kepler <gkepler@barbariangroup.com>"
+  ],
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "~2.0.2011012602",
+    "reveal.js": "~3.2.0"
+  }
+}

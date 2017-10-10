@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/reset-css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/beige.css" id="theme">
+    <style media="screen">
+      body {
+        overflow: hidden;
+      }
+      .reveal section p img {
+        padding: 50px;
+        background-color: #fff;
+        max-width: 50%;
+      }
+
+      #pixel-club-logo canvas {
+        transform: translate3d(-22%, -15%, 0) scale(0.7);
+      }
+      /*.reveal img {
+
+      }*/
+    </style>
+  </head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section>
+          <div id="pixel-club-logo"></div>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pixel Club Presents:</h2>
+            <h1>Welcome to Pixel Club</h1>
+          </section>
+
+          <section>
+            <h2>Today's episode:</h2>
+            <ol>
+              <li>Introductions</li>
+              <li>Meet your GPU</li>
+              <li>Everybody gets a repo</li>
+              <li>Three.js Boilerplate</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+
+          <section>
+            <h2>It's Charlie:</h2>
+            <ul>
+              <li>I work here!</li>
+              <li>Three.JS contributor</li>
+              <li>Low-level flash veteran</li>
+              <li>4ish years of Blender/WebGL/Three.js studies</li>
+              <li>Technically still the mayor in absentia</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>It's Greg:</h2>
+            <ul>
+              <li>I work here too!</li>
+              <li>RIT New Media Design grad</li>
+              <li>Flash veteran</li>
+              <li>Cinder/Pixi.js/WebGL/Processing/AfterEffects</li>
+              <li>Maker of 2 child units</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>What's pixel club all about?</h2>
+            <ul>
+              <li>Advanced browser graphics programming</li>
+              <li>Three.js for 3D, PIXI.js for 2D</li>
+              <li>Shaders</li>
+              <li>Design patterns and prototyping</li>
+              <li>Some game design</li>
+              <li>[INSERT DESIRED SKILL HERE]</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Androidify.com</h2>
+            <p><img src="assets/images/androidify-2.png" alt="" /></p>
+          </section>
+
+          <section>
+            <img src="assets/images/androidify-gallery.png" alt="" />
+          </section>
+
+          <section>
+            <img src="assets/images/google-times-square-1.jpg" alt="" />
+          </section>
+
+
+        </section>
+
+        <section>
+          <section>
+            <h1>Meet Your GPU</h1>
+          </section>
+          <section>
+            <h2>Screens are amazing.</h2>
+            <p><img src="assets/images/imac-screen.jpg" alt="" /></p>
+          </section>
+          <section>
+            <h2>Screens are made of pixels.</h2>
+            <p><img src="assets/images/pixellated-image.jpg" alt="" /></p>
+          </section>
+          <section>
+            <h2>Pixels are made of R, G and B.</h2>
+            <p><img src="assets/images/rgb-elements-closeup.jpg" alt="" /></p>
+          </section>
+          <section>
+            <h2>RGB is made of bits.</h2>
+            <p><img src="assets/images/pixel-color-breakdown.png" alt="" /></p>
+          </section>
+
+          <!-- <section>
+            <img src="assets/images/dock.jpg" alt="" />
+          </section>
+
+          <section>
+            <img src="assets/images/Radracer-23.png" alt="" />
+          </section> -->
+
+          <section>
+            <h2>Where do these bits come from?</h2>
+            <p><img src="assets/images/computer-screen-and-hdmi.jpg" alt="" /></p>
+          </section>
+          <section>
+            <h2>How do they get to the screen?</h2>
+            <p><img src="assets/images/hdmi-connector-diagram.gif" alt="" /></p>
+          </section>
+          <section>
+            <h3>How does an HDMI cable send data?</h3>
+            <p><img src="assets/images/4-wire-HDMI-clock.png" alt="" /></p>
+          </section>
+          <section>
+            <h2>How much information is on a screen?</h2>
+            <p>1920x1080 pixels = 2,073,600 pixels<br /><br />
+              2,073,600 pixels * 3 colors * 8 bits = 49,766,400 bits<br /><br />
+              At 60fps = <u>2,986,584,000</u> bits per second<br /><br />
+            </p>
+          </section>
+
+          <section>
+            <img src="assets/images/JohnnyPluggedIn.gif" alt="" />
+            <img src="assets/images/giphy-1.gif" alt="" />
+            <h2>3:40</h2>
+          </section>
+
+          <section>
+            <h3>Enter the GPU</h3>
+            <p><img src="assets/images/a-gpu.jpg" alt="" /></p>
+          </section>
+
+          <section>
+            <h3>GPUs are insane</h3>
+            <p>1,600+ processor cores<br />
+            4GB dedicated graphics memory</p>
+          </section>
+
+          <section>
+            <h3>Golden Rule:</h3>
+            <h1>LET THE GPU DO IT</h1>
+          </section>
+
+          <section>
+            <h1>16 ms</h1>
+            <p>1000ms / 60fps = 16.67ms per frame</p>
+          </section>
+
+          <section>
+            <h2>CPU rendering vs. GPU rendering</h2>
+            <ul>
+              <li><a href="canvas-demo.html">PIXI.JS Bunnymark Software</a></li>
+              <li><a href="webgl-demo.html">PIXI.JS Bunnymark Hardware</a></li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h1>The Pixel Club Repo</h1>
+          </section>
+
+          <section>
+            <h2>The Repo</h2>
+            <h3><a href="https://github.com/thebarbariangroup/tbg-pixel-club">github.com/thebarbariangroup/tbg-pixel-club</a></h3>
+          </section>
+
+          <section>
+            <h2>Setting up the environment</h2>
+            <ol>
+              <li>Pull down the repo</li>
+              <li>npm install</li>
+              <li>gulp bp -t threejs -n choey-hello-world</li>
+              <li>cd examples/choey-hello-world/</li>
+              <li>gulp</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Resources</h1>
+            <ul>
+              <li><a href="https://developers.google.com/web/fundamentals/performance/rendering/?hl=en">Chrome Pixel Pipeline</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+
+
+
+    </div>
+
+
+  </body>
+  <script src="dist/bundle.js" charset="utf-8"></script>
+  <script src="assets/js/pixel-club-logo.js" charset="utf-8"></script>
+</html>

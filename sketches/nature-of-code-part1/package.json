@@ -1,0 +1,11 @@
+{
+  "name": "Nature Of Code Part 1",
+  "version": "1.0.0",
+  "description": "Part 1 of Working through The Nature of Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Greg Kepler",
+  "license": "ISC"
+}

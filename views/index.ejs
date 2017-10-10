@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PIXEL CLUB</title>
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
+
+    <!--
+
+    Ah, how industrious! Digging around in the source code, are you?
+
+    This page is hosted with express, a tiny little nodejs webserver/router/templating layer.
+    The main template is in views/index.ejs, and there's a partial
+
+    -->
+  </head>
+  <body>
+    <h1>IT'S PIXEL CLUB</h1>
+
+    <div class="container">
+
+      <div class="sketches">
+        <div class="inner">
+        <% for( var e in sketches ) { var sketch = sketches[e]; %>
+          <%- include Sketch.ejs %>
+        <% } %>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+  <!-- <script src="/js/spinning-cube-background/index.js" charset="utf-8"></script> -->
+</html>

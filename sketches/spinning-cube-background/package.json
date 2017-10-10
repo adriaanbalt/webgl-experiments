@@ -1,0 +1,11 @@
+{
+  "name": "Flying cubes background",
+  "version": "1.0.0",
+  "description": "A quick demo of some flying cubes for background art.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlie",
+  "license": "ISC"
+}

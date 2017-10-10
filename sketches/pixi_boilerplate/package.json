@@ -1,0 +1,40 @@
+{
+  "name": "pixi_boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thebarbariangroup/tbg-pixel-club.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebarbariangroup/tbg-pixel-club/issues"
+  },
+  "dependencies": {
+  "homepage": "https://github.com/thebarbariangroup/tbg-pixel-club",
+    "inherits": "^2.0.1",
+    "jquery": "^2.1.4",
+    "pixi.js": "^3.0.9",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "bower": "^1.7.0",
+    "browserify": "^12.0.1",
+    "glslify": "^2.3.1",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-open": "^1.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "lodash": "^3.10.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.0",
+    "dat-gui": "^0.5.0"
+  }
+}

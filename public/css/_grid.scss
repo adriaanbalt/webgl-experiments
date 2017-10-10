@@ -1,0 +1,23 @@
+.container {
+  margin: 50px auto;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+@mixin colHalf {
+  width: 50%;
+  float: left;
+}
+@mixin colQuarter {
+  width: 25%;
+  float: left;
+}
+@mixin colSixth {
+  width: 100% * (1/6);
+  float: left;
+}
+@mixin colFull {
+  width: 100%;
+  clear: both;
+}

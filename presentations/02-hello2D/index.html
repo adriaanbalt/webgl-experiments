@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/reset-css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/beige.css" id="theme">
+    <style media="screen">
+      body {
+        overflow: hidden;
+      }
+
+      .pipelineContainer {
+        position: relative;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      img.pipeline{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+
+        /*width: 100%;*/
+        /*height: auto;*/
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <!-- <section data-background-iframe="assets/kaleido/index.html">
+        </section> -->
+
+        <section>
+          <section>
+            <h2>Pixel Club Presents:</h2>
+            <h1>2D Graphics and You!</h1>
+          </section>
+
+          <section>
+            <h2>Hello Canvas</h2>
+            <p>&lt;canvas&gt; is an HTML element which can be used to draw graphics using JavaScript</p>
+
+            <h3>Context</h3>
+            <ul>
+              <li>2D Context for CPU</li>
+              <li>WebGL Context for GPU</li>
+            </ul>
+
+          </section>
+
+          <section>
+            <h3>But what's realllllly going on?</h3>
+            <div class="pipelineContainer">
+              <img class="fragment pipeline" src="assets/render-pipeline-1.png">
+              <img class="fragment pipeline" src="assets/render-pipeline-2.png">
+              <img class="fragment pipeline" src="assets/render-pipeline-3.png">
+              <img class="fragment pipeline" src="assets/render-pipeline-4.png">
+              <img class="fragment pipeline" src="assets/render-pipeline-5.png">
+            </div>
+          </section>
+
+          <section>
+            <h3>Make it</h3>
+            <pre><code data-trim>
+              <canvas id="tutorial" width="150" height="150"></canvas>
+            </code></pre>
+            <h3>Access it</h3>
+            <pre><code data-trim>
+var canvas = document.getElementById('tutorial');
+var ctx = canvas.getContext('2d');
+              </code></pre>
+          </section>
+
+          <section>
+            <h2>Setting Size</h2>
+            <p>
+              Setting size can be done via JavaScript or CSS. <br>
+              Simple enough, but <a href="http://codepen.io/gregkepler/pen/rxvmGR" target="_new">can be a bit tricky</a>.
+            </p>
+          </section>
+
+          <!-- <section>
+            <p>
+              Let's do it. Create project and place a canvas object in it.
+              In javascript index, access the canvas.
+              In CSS, set a few things - size, background color (opaque/transparent) - show how you can set other things just like any other dom element.
+            </p>
+          </section> -->
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Canvas Drawing API</h2>
+            <p>The drawing API exposes all of the commands that you'd need to make 2D graphics. All based on the following primitives:</p>
+            <ul>
+              <li>rectangles and arcs</li>
+              <li>paths</li>
+              <li>images</li>
+              <li>text</li>
+              <li>... that's about it</li>
+            </ul>
+            <p>
+              Drawing dynamic or custom shapes <a href="https://codepen.io/gregkepler/pen/vLZmRY#0" target="_blank">can be tedious</a>.
+            </p>
+          </section>
+
+          <!-- <section>
+            <h3>Fill, stroke, and color</h3>
+            <p>
+              You can fill an object with solid or semi-transparent colors, gradients, or patterns. For lines, you have many of the same options that you'd have in a vector drawing program.
+            </p>
+            <pre><code data-trim data-noescape>
+ctx.fillStyle = 'rgb(255, 221, 0)';
+ctx.fillRect(0, 0, 150, 37.5);
+
+ctx.strokeStyle = '#09f';
+ctx.lineWidth = 2;
+ctx.stroke();
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>Saving State</h3>
+            <p>
+              For complex drawings, the drawing API allows you to save and restore context state. This is useful when using Path2D Objects and transforms.
+              [link to example - advanced pacman, using dot object, duping and scaling it ]
+            </p>
+            <pre><code data-trim>
+// add new state to the stack
+save();
+
+// remove last state from the stack
+restore();
+            </code></pre>
+          </section> -->
+
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Enter PIXI JS</h2>
+            <img src="http://www.webresourcesdepot.com/wp-content/uploads/30-pixi-js-open-source-script.jpg">
+          </section>
+
+          <section>
+            <h2>Draw shapes with PIXI</h2>
+            <p>
+              <a href="http://codepen.io/gregkepler/pen/xZWdqb" target="_blank">PIXI makes it easier</a> to draw objects and place them on stage.
+            </p>
+          </section>
+
+          <section>
+              <h2>Let's animate this stuff</h2>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Animation basics</h2>
+            <p>
+              Things are more fun when they move.
+            </p>
+          </section>
+          <section>
+            <h2>RequestAnimationFrame()</h2>
+            <pre><code>
+window.requestAnimationFrame( callback );
+            </code></pre>
+          </section>
+          <section>
+            <h2>basic animation example</h2>
+            <p>
+              <a href="http://codepen.io/gregkepler/pen/xZWdqb" target="_blank">Back to pacman...</a>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Workshop time</h2>
+            <ol>
+              <li>Update your repo</li>
+              <li>cd pixi-kaleidoscope</li>
+              <li>npm install</li>
+              <li>gulp</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <h1>Resources</h1>
+          <ul>
+            <li><a href="https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome" taget="_blank">GPU compositing in chrome</a></li>
+            <li><a href="http://www.pixijs.com/examples/" target="_blank">PixiJS Examples</a></li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+
+
+  </body>
+  <script src="dist/bundle.js" charset="utf-8"></script>
+</html>

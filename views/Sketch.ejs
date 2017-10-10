@@ -1,0 +1,12 @@
+<div class="Sketch">
+  <div class="inner">
+    <h3><%=sketch.path.dir.split('/')[2]%></h3>
+    <div class="filePath"><%= sketch.packageJson.name %></div>
+    <div class="description">
+      <%= sketch.packageJson.description !== "" ? sketch.packageJson.description : "no description." %>
+    </div>
+    <div class="buttons">
+      <div class="button"><a href="<%=sketch.url%>">view</a></div>
+    </div>
+  </div>
+</div>

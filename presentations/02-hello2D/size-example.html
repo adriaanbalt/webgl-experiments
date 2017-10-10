@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Size Example</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+      }
+      canvas{
+        display: inline-block;
+        background-color: #0000FF;
+        vertical-align: top;
+      }
+
+      #canvas1 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      #canvas2 {
+        transform: scale(0.5);
+        transform-origin: top left;
+      }
+
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas1" width=500 height=500></canvas>
+    <!-- <canvas id="canvas2" width=1000 height=1000></canvas> -->
+
+
+    <script>
+      var canvas1        = document.getElementById('canvas1');
+      // var canvas2        = document.getElementById('canvas2');
+
+      var CanvasObject = function( can ) {
+          return {
+            canvas: can,
+            ctx: can.getContext( '2d' )
+          }
+      }
+
+      // 1. draw circle
+      var canObject1 = new CanvasObject( canvas1 );
+      // var canObject2 = new CanvasObject( canvas2 );
+
+      function draw( canObject ){
+        drawCircle( canObject );
+      }
+
+      draw( canObject1 );
+      // draw( canObject2 );
+
+
+
+      var pd            = 1.0;    // pixel density
+      var drawOnResize  = true;
+
+
+      // var centerX       = canvas.width / 2;
+      // var centerY       = canvas.height / 2;
+      // var radius        = canvas.height * 0.4;
+
+
+
+      var resize = function(){
+        if( !drawOnResize )
+          return;
+
+        // match the width and height to be the same as the canvas size
+        var canWidth = window.innerWidth * pd;
+        var canHeight = window.innerHeight * pd;
+        canvas1.width = canWidth;
+				canvas1.height = canHeight;
+        radius = canHeight * 0.45;
+        centerX = canWidth / 2;
+        centerY = canHeight / 2;
+
+        // TODO: show the impact of having more pixels via increased pixel density
+
+        draw();
+      }
+
+      var draw = function() {
+        drawCircle( canObject1 );
+      }
+
+      window.onresize = function(){
+        resize();
+      }
+
+      if( !drawOnResize ){
+        draw();
+      }
+      resize();
+
+      function drawCircle( canObject ){
+          var canvas        = canObject.canvas;
+          var ctx           = canObject.ctx;
+          var centerX       = canvas.width / 2;
+          var centerY       = canvas.height / 2;
+          var radius        = canvas.height * 0.45;
+          var pd            = window.devicePixelRatio;
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.beginPath();
+          ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.lineWidth = 4;
+          ctx.strokeStyle = 'black';
+          ctx.stroke();
+      }
+
+    </script>
+  </body>
+</html>

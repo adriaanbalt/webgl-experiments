@@ -1,0 +1,29 @@
+@import './_variables';
+@import './_grid';
+@import './Sketch';
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: #111;
+  letter-spacing: 1px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: $color1;
+}
+
+h2 {
+  color: $color1;
+  background-color: $color2;
+  padding: 5px;
+  margin: 10px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

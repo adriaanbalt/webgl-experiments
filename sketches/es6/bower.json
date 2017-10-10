@@ -1,0 +1,19 @@
+{
+  "name": "tbg-threejs-boilerplate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/thebarbariangroup/tbg-threejs-boilerplate",
+  "authors": [
+    "Charlie Hoey <choey@barbariangroup.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "~2.0.2011012602"
+  }
+}
